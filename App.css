@@ -1,5 +1,5 @@
 html {
- min-height: 100vh;
+  height: 100%;
 }
 
 body {
@@ -10,6 +10,12 @@ body {
   padding: 0;
   color: #364147;
   background-color: #fff;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
 }
 
 .content {
@@ -32,15 +38,44 @@ nav {
 }
 
 footer {
-  position: relative;
   text-align: center;
-  width: 99vw;
-  bottom: 0px;
   color: gray;
   padding: 20px 0 20px 0;
+  flex-shrink: 0;
   background-color: gainsboro;
 }
 
+header ul {
+  padding-inline-start: 20px;
+}
+
+header li {
+  display: inline;
+  margin-right: 20px;
+}
+
+#detail img {
+  max-height: 400;
+}
+
+#price {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+#products {
+  display: flex;
+  justify-content: center;
+}
+
+.product {
+  display: flex;
+  align-items: flex-end;
+  max-width: 350px;
+  text-align: center;
+}
 
 #cart img {
   height: 150px;
