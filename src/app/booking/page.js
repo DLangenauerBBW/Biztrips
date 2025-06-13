@@ -1,6 +1,7 @@
+'use server'
 import styles from "./booking.module.css";
 
-export default function page() {
+export default async function page() {
 
   return (
     <div className={styles.container}>

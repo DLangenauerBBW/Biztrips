@@ -20,6 +20,7 @@ body {
 header {
   display: flex;
   padding-left: 20px;
+  height: 60px;
 }
 
 header img {
@@ -29,6 +30,7 @@ header img {
 nav {
   display: flex;
   align-items: center;
+  gap: 20px;
 }
 
 footer {
@@ -71,8 +73,15 @@ main {
 }
 
 a {
-  color: #faa541;
+  color: #000000;
   text-decoration: none;
+  font-size: 16px;
+}
+
+a:hover {
+  color: #0070f3;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 h1 {
@@ -144,10 +153,6 @@ p[role="alert"] {
 div[role="alert"] {
   color: red;
 }
-
-/* input[type="submit"] {
-  margin-top: 20px;
-} */
 
 form > div {
   margin-bottom: 20px;

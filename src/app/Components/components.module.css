@@ -1,0 +1,19 @@
+        .headerDropdown li {
+          white-space: nowrap;
+        }
+
+        .headerDropdown {
+          list-style-type: none;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          left:auto;
+          background: #fff;
+          padding: 10px;
+          margin: 0;
+          min-width: 150px
+        }
+
+        .hidden{
+          display: none;
+        }
