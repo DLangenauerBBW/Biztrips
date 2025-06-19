@@ -14,5 +14,22 @@
     padding: 5px;
     width: 280px;
     height: 300px;
+    border: 1px solid grey;
     background-color: rgb(157, 178, 248);
+}
+
+.gridElementLoading{
+    border-radius: 15px;
+    padding: 5px;
+    width: 280px;
+    height: 300px;
+    background: #f0f0f0;
+    border: 1px solid grey;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
 }

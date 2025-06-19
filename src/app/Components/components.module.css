@@ -9,11 +9,188 @@
           right: 0;
           left:auto;
           background: #fff;
-          padding: 10px;
           margin: 0;
-          min-width: 150px
+          padding: 0;
         }
 
         .hidden{
           display: none;
         }
+
+        .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contentWrapper {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tileGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.tile {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tilePicture{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.tile:hover {
+  background: #f5f5f5;
+}
+
+.tileSelected {
+  border-color: #007bff;
+  background: #e6f0ff;
+}
+
+.tileTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.tileDescription {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.tilePrice {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.tileStatus {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.noItems {
+  font-size: 1rem;
+  color: #777;
+  text-align: center;
+}
+
+.summary {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.paginationBtn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  transition: background-color 0.3s;
+}
+
+.paginationBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.paginationBtnPrimary {
+  background-color: #007bff;
+  color: white;
+}
+
+.paginationBtnPrimary:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.confirmBtn {
+  background-color: #28a745;
+  color: white;
+}
+
+.confirmBtn:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.paginationText {
+  font-size: 1rem;
+}
+
+.employeeContainer {
+  position: relative;
+}
+
+.employeeDisplay {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.employeeDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  list-style: none;
+  margin: 5px 0;
+  padding: 0;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  border-radius: 4px;
+  min-width: 150px;
+  z-index: 10;
+}
+
+.employeeItem {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.employeeItem:hover {
+  background: #f5f5f5;
+}

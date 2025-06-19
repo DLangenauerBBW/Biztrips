@@ -15,24 +15,23 @@ export default function ClientPage() {
 
   return (
     <div className={styles.contentGrid}>
-          <div className={styles.gridElement}>
-            Balalala
-          </div>
-                    <div className={styles.gridElement}>
-            Balalala
-          </div>
-                    <div className={styles.gridElement}>
-            Balalala
-          </div>
-                    <div className={styles.gridElement}>
-            Balalala
-          </div>
-                    <div className={styles.gridElement}>
-            Balalala
-          </div>
-                    <div className={styles.gridElement}>
-            Balalala
-          </div>
+        {isLoading ? (
+        Array.from({ length: 5 }).map((_, index) => (
+          <div
+            key={`skeleton-${index}`}
+            className={styles.gridElementLoading}
+          ></div>
+        ))
+      ) : (
+        <>
+          <div className={styles.gridElement}>Balalala</div>
+          <div className={styles.gridElement}>Balalala</div>
+          <div className={styles.gridElement}>Balalala</div>
+          <div className={styles.gridElement}>Balalala</div>
+          <div className={styles.gridElement}>Balalala</div>
+          <div className={styles.gridElement}>Balalala</div>
+        </>
+      )}
         </div>
   );
 }
