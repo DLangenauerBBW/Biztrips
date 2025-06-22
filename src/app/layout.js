@@ -1,10 +1,10 @@
 'use client'
-import "./globals.css";
-import Footer from "./Components/Footer";
-import Header from "./Components/Header";
-  import dynamic from 'next/dynamic';
+import "./globals.css"
+import Footer from "./Components/Footer"
+import Header from "./Components/Header"
+  import dynamic from 'next/dynamic'
 
-const UserProvider = dynamic(() => import('./lib/UserContext'), { ssr: false });
+const UserProvider = dynamic(() => import('./lib/UserContext'), { ssr: false })
 
 export default function RootLayout({ children }) {
 
@@ -21,5 +21,5 @@ export default function RootLayout({ children }) {
         </UserProvider>
       </body>
     </html>
-  );
+  )
 }

@@ -1,7 +1,7 @@
-import React from "react";
-import "./App.css";
-import Footer from "./src/app/Components/Footer";
-import Header from "./src/app/Components/Header";
+import React from "react"
+import "./App.css"
+import Footer from "./src/app/Components/Footer"
+import Header from "./src/app/Components/Header"
 
 const trips = [
   {
@@ -56,7 +56,7 @@ const trips = [
       },
     ],
   },
-];
+]
 
 export default function App() {
   function renderTrip(t) {
@@ -82,7 +82,7 @@ export default function App() {
           </figcaption>
         </figure>
       </div>
-    );
+    )
   }
 
   return (
@@ -104,5 +104,5 @@ export default function App() {
       </div>
       <Footer />
     </>
-  );
+  )
 }

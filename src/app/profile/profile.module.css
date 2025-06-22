@@ -1,0 +1,92 @@
+.pageTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.content {
+  max-height: 85%;
+  overflow-y: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+}
+
+.container {
+  height: 100vh;
+  margin: 0 20px;
+}
+
+.gridElementLoading {
+  border-radius: 15px;
+  padding: 5px;
+  width: 280px;
+  height: 300px;
+  background: #f0f0f0;
+  border: 1px solid grey;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+.bookingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.booking {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.bookingContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bookingContent h3 {
+  margin: 16px 0 8px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.bookingContent h4 {
+  margin: 12px 0 4px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.bookingContent p {
+  margin: 4px 0;
+  color: #666;
+}

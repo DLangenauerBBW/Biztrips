@@ -1,6 +1,6 @@
 'use client'
-import { redirect } from "next/navigation";
-import styles from "./page.module.css";
+import { redirect } from "next/navigation"
+import styles from "./page.module.css"
 
 
 export default function page() {
@@ -12,5 +12,5 @@ export default function page() {
         <button className={styles.button}onClick={() => redirect("/booking")}>Jetzt Buchen</button>
         </div>
     </div>
-  );
+  )
 }

@@ -1,36 +1,36 @@
-'use client';
+'use client'
 
-import { useState, useContext } from 'react';
-import styles from './components.module.css';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { UserContext } from '../lib/UserContext';
+import { useState, useContext } from 'react'
+import styles from './components.module.css'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { UserContext } from '../lib/UserContext'
 
 export default function Header() {
-  const pathname = usePathname();
-  const { user, setUser, employees } = useContext(UserContext);
-  const [isEmployeeDropdownOpen, setIsEmployeeDropdownOpen] = useState(false);
+  const pathname = usePathname()
+  const { user, setUser, employees } = useContext(UserContext)
+  const [isEmployeeDropdownOpen, setIsEmployeeDropdownOpen] = useState(false)
 
   const getActiveLinks = (path) => {
     switch (path) {
       case '/':
-        return { main: [], dropdown: [] };
+        return { main: [] }
       default:
         return {
           main: [
             { name: 'Buchen', path: '/booking' },
             { name: 'Meine Reisen', path: '/profile' }
           ]
-        };
+        }
     }
-  };
+  }
 
-  const { main } = getActiveLinks(pathname);
+  const { main } = getActiveLinks(pathname)
 
   const handleEmployeeSelect = (employee) => {
-    setUser(employee);
-    setIsEmployeeDropdownOpen(false);
-  };
+    setUser(employee)
+    setIsEmployeeDropdownOpen(false)
+  }
 
   return (
     <header>
@@ -38,7 +38,7 @@ export default function Header() {
         <Link href="/">
           <img width="150px" alt="Business Trips" src="/images/logo.png" />
         </Link>
-          {main.map((item) => (
+        {main.map((item) => (
           <li style={{ listStyleType: 'none', paddingTop: "9px", }} key={item.path}>
             <Link
               href={item.path}
@@ -51,7 +51,7 @@ export default function Header() {
             className={styles.employeeDisplay}
             onClick={() => setIsEmployeeDropdownOpen(!isEmployeeDropdownOpen)}
           >
-            {user.name}
+            {user?.name}
           </span>
           {isEmployeeDropdownOpen && (
             <ul className={styles.employeeDropdown}>
@@ -69,5 +69,5 @@ export default function Header() {
         </div>
       </nav>
     </header>
-  );
+  )
 }
